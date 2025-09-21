@@ -53,7 +53,7 @@ Paste this method in MainActivity:
   return-void
 .end method
 
-After this add this string to the start of OnCreate:
+# After adding checkFirstRunAndRequestPermission()V, add this string to the start of OnCreate:
 invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->checkFirstRunAndRequestPermission()V
 
 # Add permissions in AndroidManifest.xml
