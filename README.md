@@ -64,10 +64,13 @@ Paste this method in MainActivity:
 ```
 invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->checkFirstRunAndRequestPermission()V
 ```
+It should look like this:
+<img width="1080" height="2340" alt="Screenshot_20251110_214244_MT Manager" src="https://github.com/user-attachments/assets/f1951004-dd35-4ad8-a71d-9ebcbdb08d78" />
+
 
 # Add permissions in AndroidManifest.xml
 Paste this anywhere:
 ```
-<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 ```
