@@ -8,6 +8,7 @@ invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/i
 
 # Add permission request:
 Paste this method in MainActivity:
+```
 .method public checkFirstRunAndRequestPermission()V
     .registers 9
     .annotation build Landroid/annotation/SuppressLint;
@@ -80,7 +81,7 @@ Paste this method in MainActivity:
     :cond_39
     return-void
 .end method
-
+```
 # After adding checkFirstRunAndRequestPermission()V, add this string to the start of OnCreate:
 invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->checkFirstRunAndRequestPermission()V
 
