@@ -65,8 +65,7 @@ Paste this method in MainActivity:
 invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->checkFirstRunAndRequestPermission()V
 ```
 It should look like this:
-<img width="1080" height="2340" alt="Screenshot_20251110_214244_MT Manager" src="https://github.com/user-attachments/assets/f1951004-dd35-4ad8-a71d-9ebcbdb08d78" />
-
+<img width="1013" height="242" alt="Screenshot_20251110_214449_MT Manager" src="https://github.com/user-attachments/assets/3cfde89f-5928-41f4-bf5c-bf1610f4033a" />
 
 # Add permissions in AndroidManifest.xml
 Paste this anywhere:
