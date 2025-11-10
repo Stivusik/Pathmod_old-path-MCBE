@@ -57,5 +57,6 @@ Paste this method in MainActivity:
 invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->checkFirstRunAndRequestPermission()V
 
 # Add permissions in AndroidManifest.xml
-Paste anywhere <uses-permission  android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+Paste this anywhere:
+<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
