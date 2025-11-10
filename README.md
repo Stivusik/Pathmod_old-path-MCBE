@@ -1,10 +1,16 @@
 # Replace strings
-Replace all from:
+Replace all strings from:
+```
 invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->getDataDir()Ljava/io/File;
+```
+```
 invoke-virtual {p0, v0}, Lcom/mojang/minecraftpe/MainActivity;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
+```
 
 To:
+```
 invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+```
 
 # Add permission request:
 Paste this method in MainActivity:
