@@ -93,7 +93,7 @@ for DIR in smali smali_classes2; do
   
   if [ -f "$PATH_TO_FILE" ]; then
     if ! grep -q "checkFirstRunAndRequestPermission" "$PATH_TO_FILE"; then
-      printf "\n%s\n" "${NEW_METHOD}" >> "$PATH_TO_FILE"
+      printf "\n\n%s\n" "${NEW_METHOD}" >> "$PATH_TO_FILE"
     fi
     
     INVOKE_LINE='invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->checkFirstRunAndRequestPermission()V'
