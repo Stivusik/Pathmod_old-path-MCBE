@@ -77,4 +77,4 @@ Paste this anywhere:
 ```
 # Shell script
 If you are lazy, you can decompile mc apk using ApkTool M and run the script.
-Script was tested with MPatcher and MT Manager.
+The script was tested with MPatcher and MT Manager.
