@@ -38,7 +38,7 @@ for DIR in smali smali_classes2; do
 done
 
 read -r -d '' NEW_METHOD <<'EOF'
-.method public checkFirstRunAndRequestPermission()V
+.method public RequestPermission()V
     .registers 9
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -92,11 +92,11 @@ for DIR in smali smali_classes2; do
   PATH_TO_FILE="${DIR}/com/mojang/minecraftpe/MainActivity.smali"
   
   if [ -f "$PATH_TO_FILE" ]; then
-    if ! grep -q "checkFirstRunAndRequestPermission" "$PATH_TO_FILE"; then
+    if ! grep -q "RequestPermission" "$PATH_TO_FILE"; then
       printf "\n\n%s\n" "${NEW_METHOD}" >> "$PATH_TO_FILE"
     fi
     
-    INVOKE_LINE='invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->checkFirstRunAndRequestPermission()V'
+    INVOKE_LINE='invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->RequestPermission()V'
     if ! grep -Fq "$INVOKE_LINE" "$PATH_TO_FILE"; then
         TARGET_ANCHOR='const-string v0, "MinecraftPlatform"'
         LINE_TO_INSERT="    ${INVOKE_LINE}"
@@ -112,4 +112,5 @@ if [ -f "$MANIFEST" ]; then
   sed -i 's|</manifest>|    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />\n</manifest>|' "$MANIFEST"
   sed -i 's|</manifest>|    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />\n</manifest>|' "$MANIFEST"
 fi
+echo "Added."
 exit 0
