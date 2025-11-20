@@ -15,7 +15,7 @@ invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/i
 # Add permission request:
 Paste this method in MainActivity:
 ```
-.method public checkFirstRunAndRequestPermission()V
+.method public RequestPermission()V
     .registers 9
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -60,9 +60,9 @@ Paste this method in MainActivity:
     return-void
 .end method
 ```
-# After adding checkFirstRunAndRequestPermission()V, add this string to the start of OnCreate:
+# After adding RequestPermission()V, add this string to the start of OnCreate:
 ```
-invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->checkFirstRunAndRequestPermission()V
+invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->RequestPermission()V
 ```
 It should look like this:
 <img width="1013" height="242" alt="Screenshot_20251110_214449_MT Manager" src="https://github.com/user-attachments/assets/3cfde89f-5928-41f4-bf5c-bf1610f4033a" />
