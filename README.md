@@ -65,7 +65,7 @@ Paste this method in MainActivity:
 invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->RequestPermission()V
 ```
 It should look like this:
-<img width="1013" height="242" alt="Screenshot_20251110_214449_MT Manager" src="https://github.com/user-attachments/assets/3cfde89f-5928-41f4-bf5c-bf1610f4033a" />
+<img width="902" height="174" alt="Screenshot_20251121_074647_MT Manager" src="https://github.com/user-attachments/assets/3c9cd324-e548-4715-949a-7a7c18652df7" />
 
 # Add permissions in AndroidManifest.xml
 Paste this anywhere:
