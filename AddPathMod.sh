@@ -67,7 +67,7 @@ read -r -d '' NEW_METHOD <<'EOF'
     const-string v4, "package"
 
     invoke-virtual {p0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
-    move-result v5
+    move-result-object v5
 
     invoke-static {v4, v5, v7}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
     move-result-object v4
