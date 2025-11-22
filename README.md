@@ -14,7 +14,7 @@ invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/i
 In MainActivity.smali
 
 # Add permission request:
-Paste this method in MainActivity:
+Paste this method in MainActivity.smali:
 ```
 .method public RequestPermission()V
     .registers 9
