@@ -75,6 +75,6 @@ Paste this anywhere:
 ```
 <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 ```
-# Shell script
+# Scripts
 If you are lazy, you can decompile mc apk using ApkTool M and run the script.
 The shell script was tested with MPatcher and MT Manager, and the python script was tested with Pydroid 3.
