@@ -30,13 +30,15 @@ Paste this method in MainActivity.smali:
     const/4 v5, 0x0
 
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
     const/16 v4, 0x1e
-    
+
     if-lt v3, v4, :cond_39
 
     invoke-static {}, Landroid/os/Environment;->isExternalStorageManager()Z
+
     move-result v3
-    
+
     if-nez v3, :cond_39
 
     new-instance v3, Landroid/content/Intent;
