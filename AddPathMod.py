@@ -54,7 +54,7 @@ def main():
 
     TARGET = "invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->getDataDir()Ljava/io/File;"
     REPLACE = "invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;"
-    for DIR in ("smali", "smali_classes2"):
+    for DIR in ("smali", "smali_classes2", "smali_classes4"):
         if not os.path.isdir(DIR):
             continue
         PATH = os.path.join(DIR, "com", "mojang", "minecraftpe", "MainActivity.smali")
@@ -69,7 +69,7 @@ def main():
 
     TARGET = "invoke-virtual {p0, v0}, Lcom/mojang/minecraftpe/MainActivity;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;"
     REPLACE = "invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;"
-    for DIR in ("smali", "smali_classes2"):
+    for DIR in ("smali", "smali_classes2", "smali_classes4"):
         if not os.path.isdir(DIR):
             continue
         PATH = os.path.join(DIR, "com", "mojang", "minecraftpe", "MainActivity.smali")
@@ -124,7 +124,7 @@ def main():
 .end method
 '''
 
-    for DIR in ("smali", "smali_classes2"):
+    for DIR in ("smali", "smali_classes2", "smali_classes4"):
         if not os.path.isdir(DIR):
             continue
 
