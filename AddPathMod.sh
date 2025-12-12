@@ -3,7 +3,7 @@ if [ -n "$1" ] && [ -d "$1" ]; then
 fi
 TARGET="invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->getDataDir()Ljava/io/File;"
 REPLACE="invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;"
-for DIR in smali smali_classes2; do
+for DIR in smali smali_classes2 smali_classes4; do
   if [ ! -d "$DIR" ]; then
     continue
   fi
@@ -21,7 +21,7 @@ if [ -n "$1" ] && [ -d "$1" ]; then
 fi
 TARGET="invoke-virtual {p0, v0}, Lcom/mojang/minecraftpe/MainActivity;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;"
 REPLACE="invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;"
-for DIR in smali smali_classes2; do
+for DIR in smali smali_classes2 smali_classes4; do
   if [ ! -d "$DIR" ]; then
     continue
   fi
@@ -82,7 +82,7 @@ read -r -d '' NEW_METHOD <<'EOF'
     return-void
 .end method
 EOF
-for DIR in smali smali_classes2; do
+for DIR in smali smali_classes2 smali_classes4; do
   if [ ! -d "$DIR" ]; then
     continue
   fi
