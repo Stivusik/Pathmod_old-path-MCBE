@@ -108,7 +108,7 @@ Paste this method in MainActivity.smali:
 .end method
 ```
 
-# After adding RequestPermission()V and IfStoragePermissionWasDenied, add this string to the start of OnCreate:
+# After adding RequestPermission()V and IfStoragePermissionWasDenied(Landroid/content/Context;)V, add this string to the start of OnCreate:
 ```
 invoke-virtual {p0}, Lcom/mojang/minecraftpe/MainActivity;->RequestPermission()V
 
