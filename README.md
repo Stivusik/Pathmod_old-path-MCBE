@@ -1,3 +1,6 @@
+> [LiteLDev EXCEPTION]
+> For LiteLDev is not allowed to use this product for their purposes in any way.
+
 # Replace strings
 Replace all strings from:
 ```
